@@ -77,7 +77,7 @@ function CVK_VirtKey_options_page()
                                 echo (' selected="selected"');
                               } ?>>Urdu</option>
         </select>
-        <input type="submit" value="Change it" class="button action"/>
+        <input type="submit" value="Change it" class="button action" />
       </fieldset>
     </form>
   </div>

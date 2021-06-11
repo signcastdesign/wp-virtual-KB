@@ -84,19 +84,19 @@ window.onload = function(){
         CVK_changeDataButtons(0);
         
         // adding icon into inputs and textareas
-        jQuery('input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], input[type="datetime"], input[type="email"], textarea').each(function(){ //add all input types
+        jQuery('input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], input[type="datetime"], input[type="email"],input[type="search"], textarea').each(function(){ //add all input types
             var $this = jQuery(this);
             var CVK_thisElement = $this.width() + parseInt ($this.css("padding-right").replace("px", "")) + parseInt ($this.css("padding-left").replace("px", ""));         
             if (CVK_thisElement > 20) {
                 $this.wrapAll('<div class="CVK_formsdiv">');
-                $this.after('<div class="CVK_virt_keyboard_icon" id="CVK_virtIcon'+CVK_counter+'" style="left:'+(CVK_thisElement-28)+'px"><span class="CVK_virt_keyboard_icon_image"><svg viewbox="0 0 600 500"><use xlink:href="#CVK_path_keyboard"/></svg></span></div>');  
+                $this.after('<div class="CVK_virt_keyboard_icon" id="CVK_virtIcon'+CVK_counter+'" style=" width:'+CVK_thisElement+'px"></div>');  
                 CVK_counter++;
             }
         });
     
         
         // memorize focused element
-        jQuery('input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], input[type="datetime"], input[type="email"]').focus(function(){ //add all input types
+        jQuery('input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], input[type="datetime"], input[type="email"],input[type="search"]').focus(function(){ //add all input types
             CVK_inputElement = jQuery(this);
             CVK_iftextarea = false;
         });

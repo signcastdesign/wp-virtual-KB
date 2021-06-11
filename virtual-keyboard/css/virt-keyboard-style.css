@@ -1,222 +1,217 @@
-   .CVK_keyboard_popup {
-       width: 100%;
-       position: fixed;
-       left: 0px;
-       right: 0px;
-       bottom: 0px;
-       height: 240px;
-       background: #4d4d4d;
-       z-index: 9999;
-       display: none;
-       min-width: 780px;
-       line-height: normal;
-   }
-   
-   .CVK_keyboard_popup_close_button {
-       position: absolute;
-       right: 10px;
-       top: 8px;
-       color: #7f7f7f;
-       cursor: pointer;
-       background-image: url(../images/closebutton.png);
-       opacity: 0, 45;
-       background-repeat: no-repeat;
-       background-position: right top;
-       width: 40px;
-       height: 40px;
-   }
-   
-   .CVK_virtual_keyboard {
-       width: 775px;
-       margin-left: auto;
-       margin-right: auto;
-       padding-top: 10px;
-       text-align: center;
-   }
-   
-   .CVK_keyboard_button {
-       background-color: #FFF;
-       border: 1px solid #a1a1a1;
-       color: #000;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       margin: 2px 0px;
-       -webkit-transition-duration: 0.1s;
-       /* Safari */
-       transition-duration: 0.1s;
-       cursor: pointer;
-       font-family: Tahoma, Arial, Helvetica, sans-serif;
-       border-radius: 4px;
-       box-shadow: 1px 1px #7f7f7f;
-       box-sizing: border-box;
-       height: 38px;
-   }
-   
-   .CVK_main_buttons {
-       font-size: 17px;
-       width: 38px;
-       vertical-align: middle;
-       padding: 6px 0;
-   }
-   
-   .CVK_backspace_button {
-       font-size: 13px;
-       font-size: 13px;
-       width: 90px;
-       padding: 9px 0 3px;
-   }
-   
-   .CVK_extra_button1 {
-       font-size: 17px;
-       width: 41px;
-       vertical-align: middle;
-       padding: 6px 0;
-   }
-   
-   .CVK_extra_button2 {
-       font-size: 17px;
-       width: 43px;
-       vertical-align: middle;
-       padding: 6px 0;
-   }
-   
-   .CVK_capslock_button {
-       font-size: 13px;
-       width: 64px;
-       vertical-align: middle;
-       padding: 9px 0 3px;
-   }
-   
-   .CVK_enter_button {
-       font-size: 13px;
-       width: 63px;
-       vertical-align: middle;
-       padding: 9px 0 3px;
-   }
-   
-   .CVK_shift_button {
-       font-size: 13px;
-       width: 85px;
-       vertical-align: middle;
-       padding: 9px 0 3px;
-   }
-   
-   .CVK_space_button {
-       margin: 0 30px 0 8px;
-       font-size: 13px;
-       padding: 5px 0 7px;
-       vertical-align: middle;
-       width: 510px;
-   }
-   
-   .CVK_additions_button {
-       font-size: 13px;
-       width: 95px;
-       vertical-align: middle;
-       padding: 9px 0 3px;
-   }
-   
-   .CVK_notification_button {
-       border: 0px;
-       color: #000;
-       text-align: center;
-       text-decoration: none;
-       display: inline-block;
-       font-size: 13px;
-       margin: 2px 1px;
-       font-family: Tahoma, Arial, Helvetica, sans-serif;
-       border-radius: 4px;
-       width: 95px;
-       height: 38px;
-       vertical-align: middle;
-       padding: 9px 0 3px;
-   }
-   
-   .CVK_keyboard_button:active {
-       background-color: #e7e7e7;
-       box-shadow: 1px 1px #666;
-       transform: translateY(1px);
-   }
-   
-   .CVK_formsdiv {
-       position: relative;
-       display: block;
-   }
-   
-   .CVK_virt_keyboard_icon {
-       position: absolute;
-       top: 6px;
-       width: 25px;
-       height: 25px;
-       z-index: 1000 !important;
-   }
-   
-   .CVK_virt_keyboard_icon_image {
-       opacity: 0.85;
-       z-index: 1000;
-       cursor: pointer;
-       width: 24px;
-       height: 24px;
-   }
-   
-   .CVK_virt_keyboard_icon .CVK_v_name_text {
-       opacity: 0.45;
-       text-align: left;
-       font-size: 7px;
-       display: block;
-       min-width: 40px;
-       margin-top: -4px;
-       line-height: 1 !important;
-   }
-   
-   .CVK_virt_keyboard_icon_image:hover {
-       opacity: 1;
-   }
-   
-   .CVK_virt_keyboard_text {
-       position: relative;
-       top: 0;
-       font-size: 9px;
-   }
-   
-   .CVK_optional-button1,
-   .CVK_optional-button2,
-   .CVK_optional-button3 {
-       background-color: #eeeeee;
-       font-size: 17px;
-       width: 38px;
-       vertical-align: middle;
-       padding: 6px 0;
-   }
-   
-   textarea {
-       z-index: 100 !important;
-   }
-   
-   .CVK_virt_keyboard_icon_image {
-       fill: currentColor;
-   }
-   
-   #CVK_keyboardSVG,
-   #CVK_path_keyboard {
-       height: 0 !important;
-       position: fixed;
-   }
-   
-   #CVK_keyboorad_name {
-       min-width: 100px;
-       color: #686868;
-       font-family: Tahoma, Arial, Helvetica, sans-serif;
-       cursor: default;
-       text-shadow: 1px 2px 1px #BABABA;
-       font-size: 11px;
-   }
-   
-   #CVK_keyboorad_name a {
-       font-size: 11px;
-       color: #686868;
-       font-family: Tahoma, Arial, Helvetica, sans-serif;
-       cursor: default;
-       text-shadow: 1px 2px 1px #BABABA;
-   }
+.CVK_keyboard_popup {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 240px;
+  /* background: #4d4d4d; */
+  z-index: 9999;
+  display: none;
+  min-width: 780px;
+  line-height: normal;
+}
+
+.CVK_keyboard_popup_close_button {
+  position: absolute;
+  right: 390px;
+  top: 4px;
+  color: #ff0000;
+  cursor: pointer;
+  background-image: url(../images/closebutton.png);
+  opacity: 0, 45;
+  background-repeat: no-repeat;
+  background-position: right top;
+  width: 40px;
+  height: 40px;
+}
+
+.CVK_virtual_keyboard {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 3px solid black;
+  border-radius: 20px;
+  text-align: center;
+  background: rgb(156, 156, 156);
+}
+
+.CVK_keyboard_button {
+  background-color: #fff;
+  border: 1px solid #a1a1a1;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 0px;
+  -webkit-transition-duration: 0.1s;
+  /* Safari */
+  transition-duration: 0.1s;
+  cursor: pointer;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  border-radius: 4px;
+  box-shadow: 1px 1px #7f7f7f;
+  box-sizing: border-box;
+  height: 38px;
+}
+
+.CVK_main_buttons {
+  font-size: 17px;
+  width: 38px;
+  vertical-align: middle;
+  padding: 6px 0;
+}
+
+.CVK_backspace_button {
+  font-size: 13px;
+  font-size: 13px;
+  width: 90px;
+  padding: 9px 0 3px;
+}
+
+.CVK_extra_button1 {
+  font-size: 17px;
+  width: 41px;
+  vertical-align: middle;
+  padding: 6px 0;
+}
+
+.CVK_extra_button2 {
+  font-size: 17px;
+  width: 43px;
+  vertical-align: middle;
+  padding: 6px 0;
+}
+
+.CVK_capslock_button {
+  font-size: 13px;
+  width: 64px;
+  vertical-align: middle;
+  padding: 9px 0 3px;
+}
+
+.CVK_enter_button {
+  font-size: 13px;
+  width: 63px;
+  vertical-align: middle;
+  padding: 9px 0 3px;
+}
+
+.CVK_shift_button {
+  font-size: 13px;
+  width: 85px;
+  vertical-align: middle;
+  padding: 9px 0 3px;
+}
+
+.CVK_space_button {
+  margin: 0 30px 0 8px;
+  font-size: 13px;
+  padding: 5px 0 7px;
+  vertical-align: middle;
+  width: 510px;
+}
+
+.CVK_additions_button {
+  font-size: 13px;
+  width: 95px;
+  vertical-align: middle;
+  padding: 9px 0 3px;
+}
+
+.CVK_notification_button {
+  border: 0px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 2px 1px;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  border-radius: 4px;
+  width: 95px;
+  height: 38px;
+  vertical-align: middle;
+  padding: 9px 0 3px;
+}
+
+.CVK_keyboard_button:active {
+  background-color: #e7e7e7;
+  box-shadow: 1px 1px #666;
+  transform: translateY(1px);
+}
+
+.CVK_formsdiv {
+  position: relative;
+  display: block;
+}
+
+.CVK_virt_keyboard_icon {
+  /* background: #c71313; */
+  height: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.CVK_virt_keyboard_icon .CVK_v_name_text {
+  opacity: 0.45;
+  text-align: left;
+  font-size: 7px;
+  display: block;
+  min-width: 40px;
+  margin-top: -4px;
+  line-height: 1 !important;
+}
+
+.CVK_virt_keyboard_icon_image:hover {
+  opacity: 1;
+}
+
+.CVK_virt_keyboard_text {
+  position: relative;
+  top: 0;
+  font-size: 9px;
+}
+
+.CVK_optional-button1,
+.CVK_optional-button2,
+.CVK_optional-button3 {
+  background-color: #eeeeee;
+  font-size: 17px;
+  width: 38px;
+  vertical-align: middle;
+  padding: 6px 0;
+}
+
+textarea {
+  z-index: 100 !important;
+}
+
+.CVK_virt_keyboard_icon_image {
+  fill: currentColor;
+}
+
+#CVK_keyboardSVG,
+#CVK_path_keyboard {
+  height: 0 !important;
+  position: fixed;
+}
+
+#CVK_keyboorad_name {
+  min-width: 100px;
+  color: #686868;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  cursor: default;
+  text-shadow: 1px 2px 1px #bababa;
+  font-size: 11px;
+}
+
+#CVK_keyboorad_name a {
+  font-size: 11px;
+  color: #686868;
+  font-family: Tahoma, Arial, Helvetica, sans-serif;
+  cursor: default;
+  text-shadow: 1px 2px 1px #bababa;
+}
