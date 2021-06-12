@@ -122,6 +122,22 @@ function CVK_register_virtual_keyboard_styles()
     wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style.css'));
     wp_enqueue_style('virtual-keyboard-plugin');
   }
+  if ($currentthemekeyboardselected == 'darkgrey') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-darkgrey.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
+  if ($currentthemekeyboardselected == 'grey') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-grey.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
+  if ($currentthemekeyboardselected == 'lightgrey') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-lightgrey.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
+  if ($currentthemekeyboardselected == 'black') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-black.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
   if ($currentthemekeyboardselected == 'darkblue') {
     wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-blue.css'));
     wp_enqueue_style('virtual-keyboard-plugin');
