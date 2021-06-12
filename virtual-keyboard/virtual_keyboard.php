@@ -11,8 +11,7 @@ function CVK_VirtKey_options_page()
 {
 ?>
   <div class="wrap">
-    <h2>Virtual Keyboard Settings</h2>
-    <p>You can choose language for your virtual keyboard.</p>
+    <h1>Virtual Keyboard Settings</h1>
     <?php
     if (isset($_POST["CVK_virtkeyboard_layout"])) {
       $CVK_virtKeyBoard_layout_safe = sanitize_text_field($_POST["CVK_virtkeyboard_layout"]);
@@ -26,7 +25,7 @@ function CVK_VirtKey_options_page()
     ?>
     <form method="post">
       <fieldset class="options">
-        <legend>Language:</legend><br>
+        <h2>Language:</h2><br>
         <?php
         $CVK_virtkeyboard_layout = get_option('CVK_virtkeyboard_layout');
         ?>
@@ -77,7 +76,35 @@ function CVK_VirtKey_options_page()
                                 echo (' selected="selected"');
                               } ?>>Urdu</option>
         </select>
-        <input type="submit" value="Change it" class="button action" />
+        <input type="submit" value="Change Language" class="button action" />
+      </fieldset>
+    </form>
+    <br>
+    <?php
+    if (isset($_POST["themeforkeyboard"])) {
+      $themeforkeyboard_safe = sanitize_text_field($_POST["themeforkeyboard"]);
+
+      if ($themeforkeyboard_safe) {
+        // set language layout
+        update_option('themeforkeyboard', $themeforkeyboard_safe);
+        echo '<div class="updated"><p>Updated successfully.</p></div>';
+      }
+    }
+    $currentthemekeyboardselected = get_option('themeforkeyboard');
+    ?>
+    <form method="post">
+      <fieldset class="options">
+      <h2>Theme:</h2><br>
+      <select name="themeforkeyboard" class="bulk-action-selector-top">
+        <option value="default" <?php if ($currentthemekeyboardselected == 'default') { echo (' selected="selected"'); } ?>>Default</option>
+        <option value="darkgrey" <?php if ($currentthemekeyboardselected == 'darkgrey') { echo (' selected="selected"'); } ?>>Dark grey</option>
+        <option value="grey" <?php if ($currentthemekeyboardselected == 'grey') { echo (' selected="selected"'); } ?>>Grey</option>
+        <option value="lightgrey" <?php if ($currentthemekeyboardselected == 'lightgrey') { echo (' selected="selected"'); } ?>>Light Grey</option>
+        <option value="black" <?php if ($currentthemekeyboardselected == 'black') { echo (' selected="selected"'); } ?>>Black</option>
+        <option value="darkblue" <?php if ($currentthemekeyboardselected == 'darkblue') { echo (' selected="selected"'); } ?>>Dark Blue</option>
+      <select>
+      <input type="submit" value="Change Theme" class="button action" />
+      
       </fieldset>
     </form>
   </div>
@@ -90,8 +117,15 @@ function CVK_VirtKey_add_menu()
 }
 function CVK_register_virtual_keyboard_styles()
 {
-  wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style.css'));
-  wp_enqueue_style('virtual-keyboard-plugin');
+  $currentthemekeyboardselected = get_option('themeforkeyboard');
+  if ($currentthemekeyboardselected == 'default') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
+  if ($currentthemekeyboardselected == 'darkblue') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-blue.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
 }
 
 function CVK_register_virtual_keyboard_scripts()

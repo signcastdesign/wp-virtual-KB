@@ -35,13 +35,13 @@
   border: 3px solid black;
   border-radius: 20px;
   text-align: center;
-  background: rgb(156, 156, 156);
+  background: rgb(17, 4, 92);
 }
 
 .CVK_keyboard_button {
-  background-color: #fff;
-  border: 1px solid #a1a1a1;
-  color: #000;
+  background-color: rgb(9, 22, 100);
+  border: 1px solid #1316e6;
+  color: rgb(255, 255, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -138,7 +138,7 @@
 }
 
 .CVK_keyboard_button:active {
-  background-color: #e7e7e7;
+  background-color: #04209e;
   box-shadow: 1px 1px #666;
   transform: translateY(1px);
 }
@@ -178,7 +178,7 @@
 .CVK_optional-button1,
 .CVK_optional-button2,
 .CVK_optional-button3 {
-  background-color: #eeeeee;
+  background-color: #03197c;
   font-size: 17px;
   width: 38px;
   vertical-align: middle;
