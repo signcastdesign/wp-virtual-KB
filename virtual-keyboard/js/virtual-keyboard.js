@@ -448,3 +448,12 @@ window.onload = function(){
     }
                  
 }
+setInterval(function(){
+    var my_keyboard_popup_cheack = document.getElementsByClassName("CVK_keyboard_popup")[0].style.display
+    if (my_keyboard_popup_cheack == "block"){
+        document.getElementsByTagName("body")[0].style="overflow: hidden;"
+    }
+    else{
+        document.getElementsByTagName("body")[0].style="overflow: auto;"
+    }
+},500)
