@@ -102,6 +102,7 @@ function CVK_VirtKey_options_page()
         <option value="lightgrey" <?php if ($currentthemekeyboardselected == 'lightgrey') { echo (' selected="selected"'); } ?>>Light Grey</option>
         <option value="black" <?php if ($currentthemekeyboardselected == 'black') { echo (' selected="selected"'); } ?>>Black</option>
         <option value="darkblue" <?php if ($currentthemekeyboardselected == 'darkblue') { echo (' selected="selected"'); } ?>>Dark Blue</option>
+        <option value="whitetheme" <?php if ($currentthemekeyboardselected == 'whitetheme') { echo (' selected="selected"'); } ?>>White Theme</option>
       <select>
       <input type="submit" value="Change Theme" class="button action" />
       
@@ -140,6 +141,10 @@ function CVK_register_virtual_keyboard_styles()
   }
   if ($currentthemekeyboardselected == 'darkblue') {
     wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-blue.css'));
+    wp_enqueue_style('virtual-keyboard-plugin');
+  }
+  if ($currentthemekeyboardselected == 'whitetheme') {
+    wp_register_style('virtual-keyboard-plugin', plugins_url('virtual-keyboard/css/virt-keyboard-style-white.css'));
     wp_enqueue_style('virtual-keyboard-plugin');
   }
 }
